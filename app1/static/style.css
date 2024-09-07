@@ -90,3 +90,15 @@ body{
     justify-self: center;
     color: brown;
   }
+
+  .formulario{
+    padding-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    form{
+      width: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+  }

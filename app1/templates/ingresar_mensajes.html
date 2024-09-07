@@ -6,7 +6,7 @@
 {%endblock%}
 {%block contenido %}
     <h1>mandar mensaje</h1>
-    <div>
+    <div class="formulario">
         <form action="http://localhost:8000/cargar_mensaje/" method="POST">
         
             {% csrf_token %}
