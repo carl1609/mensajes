@@ -1,0 +1,28 @@
+{%extends "base.html" %}
+
+{%block titulo %} guardar mensajes {%endblock%}
+{%block  header %} 
+{%include "navegacion.html" %}
+{%endblock%}
+{%block contenido %}
+    <h1>mandar mensaje</h1>
+    <div>
+        <form action="http://localhost:8000/cargar_mensaje/" method="POST">
+        
+            {% csrf_token %}
+        
+            <label for ="titulo">Remitente:</label>
+            <input type="text" id="remitente" name="remitente" required><br><br>
+
+            <label for="destinatario">Destinatario:</label>
+            <input type="text" id="destinatario" name="destinatario" required><br><br>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea><br><br>
+
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+{%endblock%}
+{%block footer%}{%endblock%}

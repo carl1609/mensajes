@@ -1,0 +1,92 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    
+  }
+  .inicio{
+    
+    
+   height: 15%;
+   background-color: burlywood;
+  }
+  .inicio nav{
+    
+    padding-left: 5px;
+    padding-bottom:10px;
+    list-style:none;
+      display:flex;
+      flex-direction:row;
+      gap:10px; 
+      justify-content: start;
+      align-content: flex-end;
+  }
+  .inicio h1{
+    padding: 5px;
+  
+  }
+  .inicio a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border: 0;
+    background: transparent;
+  }
+  .inicio a:hover{
+    color: brown;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 1px 1px rgba(220, 183, 136, 0.302),inset -1px -1px rgba(220, 183, 136, 0.302);
+  }
+  .c_mensajes{
+    width: 100%;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+  }
+  .mensajes{
+    max-width: 30%;
+    border-radius: 8px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px  rgba(165, 42, 42, 0.867),inset -1px -1px rgba(165, 42, 42, 0.629),inset 1px 1px rgba(244, 197, 197, 0.364)  ;
+    p{
+      font-size: 25px; 
+      bold {
+        color: brown;
+      }
+    }
+    a{
+      width: 18%;
+      font-size: 25px;
+      padding-left: 5px;
+      text-decoration: none;
+      color:brown;
+      
+    }
+    a:hover{
+      box-shadow: 1px 1px rgb(68, 1, 1),inset -1px -1px red;
+      border-radius: 20px;
+      color: rgb(3, 3, 87);
+    }
+  }
+  .content {
+    display: grid;
+    grid-template-rows: 10% 1fr;
+  }
+  .content h1{
+    display: inline;
+    justify-self: center;
+    color: brown;
+  }
