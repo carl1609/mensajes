@@ -10,23 +10,26 @@
 
         
     <div class="c_mensajes">
-        {% for mensaje in mensajes %}
-            <div class="mensajes">
-                <p><bold>remitente: </bold> {{mensaje.remitente}}</p>
-                <p><bold>destinatario: </bold> {{mensaje.destinatario}}</p>
-                <p><bold>contenido: </bold> {{mensaje.contenido_mensaje}}</p>
-                <p><bold>fecha y hora: </bold>{{mensaje.hora}}</p>
-                <a class="borrar" href="http://localhost:8000/borrar_mensaje/{{mensaje.id}}">borrar</a>
-            </div>
-        {%endfor %}
-
+        {% if mensajes|length > 0 %}
+            {% for mensaje in mensajes %}
+                <div class="mensajes">
+                    <p><bold>remitente: </bold> {{mensaje.remitente}}</p>
+                    <p><bold>destinatario: </bold> {{mensaje.destinatario}}</p>
+                    <p><bold>contenido: </bold> {{mensaje.contenido_mensaje}}</p>
+                    <p><bold>fecha y hora: </bold>{{mensaje.hora}}</p>
+                    <a class="borrar" href="http://localhost:8000/borrar_mensaje/{{mensaje.id}}">borrar</a>
+                </div>
+            {%endfor %}
+        {% else %}
+        <div class="respuesta">
+            <h1>no se encontraron  mensajes</h1>
+        </div>
+        {% endif %}
     </div>
     
         
 
 {%endblock%}
 {%block footer%}
-<div class="pie">
-<h4>todos los derecho para mi:carlos</h4>
-</div>
+
 {%endblock%}
