@@ -32,6 +32,30 @@ def enviado_con_exito(request):
     return render(request,'mensaje_enviado.html')
 
 def error_al_enviarlo(request):
-    return render(request,'mensaje_error.html') 
+    return render(request,'mensaje_error.html')
+ 
 def ingresar_mensajes(request):
-    return render(request,'ingresar_mensajes.html')        
+    return render(request,'ingresar_mensajes.html')
+
+def buscar_mensajes(request):
+    return render(request,'buscar_mensajes.html')
+
+def ver_mensajes_buscados(request):
+    mensaje=""
+    remitente=request.POST.get('remitente')
+    destinatario=request.POST.get('destinatario')
+    if(remitente == "" and destinatario != ""):
+        mensaje=Mensaje.objects.filter(destinatario=destinatario)
+        
+    elif (remitente != "" and destinatario == ""):
+        mensaje=Mensaje.objects.filter(remitente=remitente)
+    
+    else:
+        mensaje=Mensaje.objects.filter(remitente=remitente,destinatario=destinatario)
+
+    contexto = {
+        'mensajes': mensaje
+    }
+        
+    
+    return render(request,'mensajes_buscados.html',contexto)      

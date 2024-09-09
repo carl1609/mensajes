@@ -8,5 +8,7 @@ urlpatterns = [
     path('enviado_con_exito/',views.enviado_con_exito,name='enviado_con_exito'),
     path('error_al_enviarlo/',views.error_al_enviarlo,name='error_al_enviarlo'),
    path('ingresar_mensajes/',views.ingresar_mensajes,name='ingresar_mensajes'),
+   path("buscar_mensajes/",views.buscar_mensajes,name='buscar_mensajes'),
+   path("ver_mensajes_buscados/",views.ver_mensajes_buscados,name='ver_mensajes_buscados'),
     
 ]

@@ -1,0 +1,30 @@
+{%extends "base.html" %}
+
+{%block titulo %} guardar mensajes {%endblock%}
+{%block  header %} 
+{%include "navegacion.html" %}
+{%endblock%}
+{%block contenido %}
+    <h1>Buscar mensaje</h1>
+    <div class="formulario">   
+        
+        <form action="http://localhost:8000/ver_mensajes_buscados/" method="post">
+
+            {% csrf_token %}
+
+            <labeel for="destinatario">destinatario</label>
+            <input id="destinatario" name="destinatario" type="text">
+            <label for="remitente">Remitente</label>
+            <input id="remitente" name="remitente" type="text">
+            <input type="submit" value="buscar">
+        </form>
+    </div>
+
+{%endblock%}
+{%block footer%}
+
+{%endblock%}
+
+
+
+
